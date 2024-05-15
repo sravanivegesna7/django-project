@@ -16,3 +16,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    publication_date = models.DateTimeField(auto_now_add=True)
+    author_name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.title
